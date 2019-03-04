@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>对象语法绑定class</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<style>
+    .active{
+        color:red;
+    }
+</style>
+</head>
+<body>
+<div id="app">
+    <span @click='handleChangeColor' :class='{active:isClick}'>是否改变当前字体颜色</span>
+    <span :class='classObject'>非内联模板中</span>
+</div>
+	
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        isClick: false,
+        classObject:{
+            active:true
+        } 
+    },
+    methods:{
+        handleChangeColor(){
+            this.isClick  = !this.isClick;
+        }
+    }
+})
+</script>
+</body>
+</html>

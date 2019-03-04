@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript表达式绑定class</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div :class="isA? 'classA' : 'classB'">javascript表达式绑定class</div>
+    
+</div>
+	
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        isA: false 
+    }
+})
+</script>
+</body>
+</html>

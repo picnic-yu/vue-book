@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>变量绑定class</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div :class="classA">变量绑定</div>
+    
+</div>
+	
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        classA: 'class-a'  //当classA改变时将更新class
+    }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>对象语法绑定class</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div :class="colClass" >计算属性绑定class</div>
+</div>
+	
+<script>
+new Vue({
+    el: '#app',
+    data() {
+        return {
+           isA:true,
+           isB:true
+        }
+    },
+    computed:{
+        colClass(){
+            
+            return[
+                this.isA?'classA':'',
+                this.isB?'classB':'',
+            ]
+        }
+    }
+})
+</script>
+</body>
+</html>
